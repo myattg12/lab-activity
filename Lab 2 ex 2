@@ -1,0 +1,52 @@
+#include <iostream>
+#include <iomanip>
+#include "ex 2.h"
+using namespace std;
+
+int main() {
+	double salary;
+	int children;
+	double taxRate =0;
+	double taxAmount =0;
+	double deductionPerChild = 0.05;//5% reduction per child 
+
+
+	// cout for annual salary 
+	cout << "Enter your annual salary!";
+	cin >> salary; 
+
+	//determine the tax rate based on the salary 
+	if (salary < 12, 000) {
+		taxRate = 0.06; //6%tax bracket
+	}
+	else if (salary <= 38, 000) {
+		taxRate = 0.27; //27%tax 
+	}
+	else if (salary <= 55, 000) {
+		taxRate = 0.33; //33% tax
+	}
+	else {
+		taxRate = 0.39; //39% tax
+	}
+	//Ask for the number of children to calculate the deduction 
+	cout << "How many household members do you have including children?(Enter 0 if none)";
+	cin >> children;
+
+	//calculate the tax deduction based on children 
+	double totalDeduction = salary * deductionPerChild* children; 
+
+	// calculate the adjusted salary after children
+	double adjustedsalary = salary - totalDeduction;
+	taxAmount = adjustedsalary * taxRate; // Apply tax rate on reduced salary
+
+	// Calculate net salary after tax
+	double netSalary = adjustedsalary - taxAmount;
+
+	// Set the precision for output to 2 decimal places
+	cout << fixed << setprecision(2);
+
+	// Display the results
+	cout << "This year you paid $" << taxAmount << " dollars in tax." << endl;
+	cout << "So your net salary after taxes are taken out is $" << netSalary << "." << endl;
+
+	return 0;
