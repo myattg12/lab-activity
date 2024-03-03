@@ -1,0 +1,36 @@
+//
+//  main.cpp
+//  Lab 2 exercise  3
+//
+//  Created by myattg on 3/3/24.
+//
+#include <iostream>
+using namespace std;
+
+int main() {
+    char a, b, c,anime;
+
+    cout << "Enter three characters: ";
+    cin >> a >> b >> c;
+
+    // Sorting using if, else if, and else
+    if (a > b) {
+        anime = a;
+        a = b;
+        b = anime;
+    }
+    if (a > c) {
+        anime = a;
+        a = c;
+        c = anime;
+    }
+    if (b > c) {
+        anime = b;
+        b = c;
+        c = anime;
+    }
+
+    cout << "Characters in ascending order: " << a << ", " << b << ", " << c << endl;
+
+    return 0;
+}
