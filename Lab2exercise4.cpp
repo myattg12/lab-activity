@@ -13,13 +13,13 @@ int main() {
         if (decision == "rest") {
             cout << "As you rest, you find a forbidden map on the tree. Adventure awaits! THE END." << endl;
         } else {
-            cout << "You continue your journey, eager for what lies ahead. THE END." << endl;
+            cout << "You continue your journey, curious for what lies ahead. THE END." << endl;
         }
     } else if (decision == "right") {
-        cout << "You encounter a mysterious old bridge. Do you cross it or turn back? (cross/back): ";
+        cout << "You encounter an old bridge. Do you cross it or turn back? (cross/back): ";
         cin >> decision;
         if (decision == "cross") {
-            cout << "The bridge leads to an ancient city. You've discovered a lost civilization! THE END." << endl;
+            cout << "The bridge leads to an ancient city. You've discovered a lost tribes! THE END." << endl;
         } else {
             cout << "Turning back, you decide some mysteries are best left undiscovered. THE END." << endl;
         }
