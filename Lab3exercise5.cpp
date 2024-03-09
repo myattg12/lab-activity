@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
 using namespace std;
-// declaring choice and decision 
+
 int main() {
     int choice;
     string decision;
-// starting to do menu function 
+
+    while (true){// start the loop to display the menu 
     cout << "***************************************************" << endl;
     cout << "Welcome!" << endl;
     cout << "Please choose a number from the following options:" << endl;
@@ -14,7 +15,7 @@ int main() {
     cout << "3. Exit" << endl;
     cout << "****************************************************" << endl;
 
-    cout << "Enter your choice (1-3): ";
+    cout << "Enter your choice (1-3): "; //making a choice for the game
     cin >> choice;
 
     if (choice == 1) {
@@ -58,6 +59,12 @@ int main() {
     cout << "and i ate the"<< typeofFood<<"which is"<< adjective;
     cout << "I have ever tasted and I am very happy today!"<< endl;
     
+    } else if (choice ==3){
+        cout<< "Exiting...Thank you for playing!"<< endl;
+        break ; //exit the loop  
+    } else {
+        cout<< "Invalid option, please choose differnent one!"<< endl;
+    }
     return 0;
 }
     }

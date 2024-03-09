@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// declare loanamount, interestrate
 int main() {
     double loanAmount, yearInterestRate, monthlyPayment;
     cout << "Loan amount: ";
@@ -14,7 +14,7 @@ int main() {
 
     double monthlyInterestRate = yearInterestRate / 12 / 100;
     int months = 0;
-
+// using loop to calculate the loan amount and payment
     while (loanAmount > 0) {
         loanAmount = loanAmount + (loanAmount * monthlyInterestRate) - monthlyPayment;
         if (loanAmount < 0) {
