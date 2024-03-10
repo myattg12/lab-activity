@@ -8,21 +8,21 @@ cout<<"Enter your salary: ";
 cin>>salary;
 
 if (salary > 55000) {
-        // Tax for income over $55,000
+        //delcaring the tax bracket for more than 55000
         tax += (salary - 55000) * 0.39;
-        salary = 55000; // Adjust salary down to the next bracket
+        salary = 55000; 
     }
     if (salary > 38000) {
-        // Tax for income between $38,001 and $55,000
+        // declaring tax bracket for 38000
         tax += (salary - 38000) * 0.33;
-        salary = 38000; // Adjust salary down to the next bracket
+        salary = 38000; 
     }
     if (salary > 12000) {
-        // Tax for income between $12,001 and $38,000
+        // income between 12000 to 38000
         tax += (salary - 12000) * 0.27;
-        salary = 12000; // Adjust salary down to the next bracket
+        salary = 12000; 
     }
-    // Tax for income up to $12,000
+    //income up to $12,000
     tax += salary * 0.06;
 
 cout <<fixed;
